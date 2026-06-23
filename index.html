@@ -15,7 +15,6 @@
 <header id="header">
   <div class="container nav-wrap">
     <a href="#" class="brand">AGIAY</a>
-
     <nav>
       <ul class="nav-list" id="navList">
         <li><a href="#">Trang Chủ</a></li>
@@ -25,21 +24,16 @@
         <li><a href="#" onclick="openModal();return false;">Liên Hệ</a></li>
       </ul>
     </nav>
-
     <div class="nav-actions">
       <a href="tel:1900633928" class="hotline-link">
         <i class="fas fa-phone-alt"></i>
-        <div>
-          <small>Hotline</small>
-          <strong>1900 633 928</strong>
-        </div>
+        <div><small>Hotline</small><strong>1900 633 928</strong></div>
       </a>
       <button class="cart-btn" aria-label="Giỏ hàng">
         <i class="fas fa-shopping-cart"></i>
         <span class="cart-badge">0</span>
       </button>
     </div>
-
     <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -50,7 +44,6 @@
 <section id="hero">
   <div class="container hero-grid">
 
-    <!-- Left: Product info -->
     <div class="hero-info">
       <span class="badge-seller">BEST SELLER</span>
       <p class="product-line">GIÀY LƯỚI DA NAM</p>
@@ -62,6 +55,35 @@
         <span class="price-old">990.000đ</span>
       </div>
 
+      <!-- Size selector -->
+      <div class="selector-group">
+        <p class="selector-label">Chọn size:</p>
+        <div class="size-options" id="sizeOptions">
+          <button class="opt-btn" data-size="38">38</button>
+          <button class="opt-btn" data-size="39">39</button>
+          <button class="opt-btn" data-size="40">40</button>
+          <button class="opt-btn selected" data-size="41">41</button>
+          <button class="opt-btn" data-size="42">42</button>
+          <button class="opt-btn" data-size="43">43</button>
+        </div>
+      </div>
+
+      <!-- Color selector -->
+      <div class="selector-group">
+        <p class="selector-label">Chọn màu:</p>
+        <div class="color-options" id="colorOptions">
+          <button class="color-btn selected" data-color="Đen" style="--c:#111" title="Đen">
+            <span></span>
+          </button>
+          <button class="color-btn" data-color="Nâu" style="--c:#6b3a2a" title="Nâu">
+            <span></span>
+          </button>
+          <button class="color-btn" data-color="Bò" style="--c:#c19a6b" title="Bò">
+            <span></span>
+          </button>
+        </div>
+      </div>
+
       <ul class="guarantee-list">
         <li><i class="fas fa-medal"></i> 100% da bò cao cấp</li>
         <li><i class="fas fa-shield-alt"></i> Bảo hành 12 tháng</li>
@@ -69,21 +91,16 @@
       </ul>
 
       <div class="hero-btns">
-        <button class="btn btn-buy" onclick="openModal()">MUA NGAY</button>
+        <button class="btn btn-buy" id="buyBtn" onclick="openOrderModal()">MUA NGAY</button>
         <button class="btn btn-installment">TRẢ GÓP 0%</button>
       </div>
     </div>
 
-    <!-- Right: Product image -->
+    <!-- Product image -->
     <div class="hero-visual">
-      <!--
-        ĐẶT ẢNH THỰC TẾ:
-        Thay thẻ SVG dưới bằng: <img src="images/hero-shoe.jpg" alt="Giày BN0003">
-        Tạo thư mục images/ và đặt ảnh vào đó.
-      -->
-      <div class="shoe-wrap">
-        <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" class="shoe-svg" aria-label="Giày BN0003">
-          <!-- Shoe B (back/left, slightly behind) -->
+      <div class="shoe-wrap" id="hero-img-wrap">
+        <!-- Default SVG placeholder — replaced automatically when hero image is uploaded -->
+        <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" class="shoe-svg" id="heroSvg" aria-label="Giày BN0003">
           <g transform="translate(-28,22) scale(0.92)">
             <ellipse cx="302" cy="305" rx="195" ry="14" fill="rgba(0,0,0,0.08)"/>
             <path d="M82,262 Q70,244 72,216 Q75,186 100,168 Q132,151 195,144 Q278,137 366,135 Q420,134 450,147 Q470,160 472,187 Q474,212 464,236 Q455,252 440,258 L82,262 Z" fill="#1a1a1a"/>
@@ -91,30 +108,17 @@
             <path d="M100,168 Q135,156 200,149 Q280,142 370,140 Q418,139 446,149 Q425,144 374,143 Q282,145 198,152 Q135,159 102,173 Z" fill="rgba(255,255,255,0.04)"/>
             <path d="M252,137 Q298,131 362,133 Q404,135 436,148 Q412,140 364,138 Q308,136 256,138 Z" fill="#111"/>
           </g>
-          <!-- Shoe A (front/right) -->
           <g transform="translate(28,-16)">
             <ellipse cx="298" cy="308" rx="200" ry="15" fill="rgba(0,0,0,0.13)"/>
-            <!-- Sole -->
             <path d="M80,258 Q78,270 104,276 Q200,284 360,282 Q430,280 456,270 Q462,263 456,257 Q440,265 360,268 Q200,271 106,267 Q85,264 80,258 Z" fill="#2a2a2a"/>
-            <!-- Heel block -->
             <path d="M430,257 L456,257 L452,240 L424,244 Z" fill="#1e1e1e"/>
-            <!-- Main upper -->
             <path d="M80,258 Q67,238 70,210 Q73,180 100,162 Q132,144 196,138 Q280,130 370,128 Q424,127 452,141 Q472,154 474,182 Q476,208 466,233 Q456,250 440,258 L430,260 Q340,268 190,265 Q118,262 82,258 Z" fill="#111"/>
-            <!-- Leather sheen -->
             <path d="M100,162 Q136,149 202,142 Q284,134 376,132 Q420,131 448,142 Q426,136 378,135 Q284,137 200,145 Q136,152 102,168 Z" fill="rgba(255,255,255,0.05)"/>
-            <!-- Collar/opening -->
             <path d="M252,130 Q300,124 366,126 Q408,128 440,142 Q416,134 368,131 Q312,129 256,131 Z" fill="#0d0d0d"/>
-            <!-- Collar edge -->
-            <path d="M258,132 Q308,126 368,128 Q406,130 436,142 L440,148 Q414,140 368,138 Q308,136 260,138 Z" fill="rgba(255,255,255,0.04)"/>
-            <!-- Toe crease detail -->
             <path d="M83,228 Q88,216 102,208 Q94,218 85,230 Z" fill="rgba(255,255,255,0.07)"/>
-            <!-- Side stitching line -->
             <path d="M106,170 Q140,158 200,152 Q280,144 370,142" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none" stroke-dasharray="4,4"/>
-            <!-- AGIAY logo on shoe -->
             <text x="268" y="206" font-family="Georgia,serif" font-size="20" fill="rgba(255,255,255,0.09)" font-weight="bold" letter-spacing="5">AGIAY</text>
-            <!-- Sole detail line -->
             <path d="M105,258 Q200,262 360,260 Q400,259 428,256" stroke="rgba(255,255,255,0.07)" stroke-width="1.5" fill="none"/>
-            <!-- Brand on sole -->
             <text x="270" y="274" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#4a4a4a" letter-spacing="3">AGIAY</text>
           </g>
         </svg>
@@ -129,31 +133,19 @@
   <div class="container benefits-grid">
     <div class="benefit-item">
       <i class="fas fa-truck"></i>
-      <div>
-        <strong>MIỄN PHÍ GIAO HÀNG</strong>
-        <span>Đơn hàng từ 499K</span>
-      </div>
+      <div><strong>MIỄN PHÍ GIAO HÀNG</strong><span>Đơn hàng từ 499K</span></div>
     </div>
     <div class="benefit-item">
       <i class="fas fa-hand-holding-usd"></i>
-      <div>
-        <strong>THANH TOÁN KHI NHẬN HÀNG</strong>
-        <span>An toàn – tiện lợi</span>
-      </div>
+      <div><strong>THANH TOÁN KHI NHẬN HÀNG</strong><span>An toàn – tiện lợi</span></div>
     </div>
     <div class="benefit-item">
       <i class="fas fa-headset"></i>
-      <div>
-        <strong>TƯ VẤN NHIỆT TÌNH</strong>
-        <span>Hỗ trợ 24/7</span>
-      </div>
+      <div><strong>TƯ VẤN NHIỆT TÌNH</strong><span>Hỗ trợ 24/7</span></div>
     </div>
     <div class="benefit-item">
       <i class="fas fa-check-circle"></i>
-      <div>
-        <strong>CAM KẾT CHẤT LƯỢNG</strong>
-        <span>100% chính hãng</span>
-      </div>
+      <div><strong>CAM KẾT CHẤT LƯỢNG</strong><span>100% chính hãng</span></div>
     </div>
   </div>
 </section>
@@ -163,42 +155,26 @@
   <div class="container">
     <h2 class="section-title fade-up">VÌ SAO CHỌN BN0003?</h2>
     <div class="why-grid">
-
       <div class="why-card fade-up">
-        <!--
-          Thay bằng: <img src="images/feature-1.jpg" alt="Da bò cao cấp">
-        -->
-        <div class="feature-img fi-1">
-          <i class="fas fa-star"></i>
-        </div>
+        <div class="feature-img fi-1" id="feat-img-1"><i class="fas fa-star"></i></div>
         <h3>DA BÒ CAO CẤP</h3>
         <p>Chất da mềm mại, bền bỉ theo thời gian</p>
       </div>
-
       <div class="why-card fade-up">
-        <div class="feature-img fi-2">
-          <i class="fas fa-feather-alt"></i>
-        </div>
+        <div class="feature-img fi-2" id="feat-img-2"><i class="fas fa-feather-alt"></i></div>
         <h3>ÊM ÁI TỐI ĐA</h3>
         <p>Lót trong êm, thoáng khí, giảm mỏi hơn, khử mùi</p>
       </div>
-
       <div class="why-card fade-up">
-        <div class="feature-img fi-3">
-          <i class="fas fa-shoe-prints"></i>
-        </div>
+        <div class="feature-img fi-3" id="feat-img-3"><i class="fas fa-shoe-prints"></i></div>
         <h3>ĐẾ CAO SU CHỐNG TRƯỢT</h3>
         <p>Bám đường tốt, di chuyển an toàn, êm chân</p>
       </div>
-
       <div class="why-card fade-up">
-        <div class="feature-img fi-4">
-          <i class="fas fa-gem"></i>
-        </div>
+        <div class="feature-img fi-4" id="feat-img-4"><i class="fas fa-gem"></i></div>
         <h3>THIẾT KẾ TINH TẾ</h3>
         <p>Kiểu dáng sang trọng, dễ dàng phối đồ</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -206,72 +182,33 @@
 <!-- ======= PRODUCT INFO + SIZE TABLE ======= -->
 <section id="product-detail">
   <div class="container detail-grid">
-
-    <!-- Product info table -->
     <div class="info-block fade-up">
       <h2 class="section-title">THÔNG TIN SẢN PHẨM</h2>
       <table class="info-table">
         <tbody>
-          <tr>
-            <td><i class="fas fa-tag"></i> Mã sản phẩm</td>
-            <td><strong>BN0003</strong></td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-layer-group"></i> Chất liệu</td>
-            <td>Da bò cao cấp</td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-couch"></i> Lót trong</td>
-            <td>Da PU êm ái</td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-shoe-prints"></i> Đế giày</td>
-            <td>Cao su chống trượt</td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-palette"></i> Màu sắc</td>
-            <td>Đen</td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-ruler"></i> Size</td>
-            <td>38 – 43</td>
-          </tr>
+          <tr><td><i class="fas fa-tag"></i> Mã sản phẩm</td><td><strong>BN0003</strong></td></tr>
+          <tr><td><i class="fas fa-layer-group"></i> Chất liệu</td><td>Da bò cao cấp</td></tr>
+          <tr><td><i class="fas fa-couch"></i> Lót trong</td><td>Da PU êm ái</td></tr>
+          <tr><td><i class="fas fa-shoe-prints"></i> Đế giày</td><td>Cao su chống trượt</td></tr>
+          <tr><td><i class="fas fa-palette"></i> Màu sắc</td><td>Đen / Nâu / Bò</td></tr>
+          <tr><td><i class="fas fa-ruler"></i> Size</td><td>38 – 43</td></tr>
         </tbody>
       </table>
     </div>
-
-    <!-- Size chart -->
     <div class="size-block fade-up">
       <h2 class="section-title">BẢNG SIZE</h2>
       <div class="size-table-wrap">
         <table class="size-table">
           <thead>
-            <tr>
-              <th>SIZE</th>
-              <th>38</th>
-              <th>39</th>
-              <th>40</th>
-              <th>41</th>
-              <th>42</th>
-              <th>43</th>
-            </tr>
+            <tr><th>SIZE</th><th>38</th><th>39</th><th>40</th><th>41</th><th>42</th><th>43</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>CHIỀU DÀI CHÂN (cm)</td>
-              <td>24.0</td>
-              <td>24.5</td>
-              <td>25.0</td>
-              <td>25.5</td>
-              <td>26.0</td>
-              <td>26.5</td>
-            </tr>
+            <tr><td>CHIỀU DÀI CHÂN (cm)</td><td>24.0</td><td>24.5</td><td>25.0</td><td>25.5</td><td>26.0</td><td>26.5</td></tr>
           </tbody>
         </table>
       </div>
       <p class="size-note">* Lưu ý: Thống số trên có thể chênh lệch 0.5cm tùy form chân.</p>
     </div>
-
   </div>
 </section>
 
@@ -310,9 +247,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="container">
-      <p>&copy; 2024 AGIAY. All rights reserved.</p>
-    </div>
+    <div class="container"><p>&copy; 2024 AGIAY. All rights reserved.</p></div>
   </div>
 </footer>
 
@@ -320,13 +255,11 @@
 <div id="modal" class="modal-overlay" onclick="overlayClick(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
-
     <div id="form-wrap">
       <div class="modal-head">
         <h2>ĐẶT HÀNG NGAY</h2>
         <p>Điền thông tin – chúng tôi sẽ liên hệ xác nhận đơn hàng</p>
       </div>
-
       <form id="order-form" onsubmit="handleSubmit(event)" novalidate>
         <div class="form-row">
           <div class="form-group">
@@ -338,17 +271,16 @@
             <input id="f-phone" type="tel" name="phone" placeholder="0912 345 678" required>
           </div>
         </div>
-        <div class="form-group">
-          <label for="f-size">Chọn size</label>
-          <select id="f-size" name="size">
-            <option value="">-- Chọn size giày --</option>
-            <option value="38">38 – Chiều dài chân 24.0 cm</option>
-            <option value="39">39 – Chiều dài chân 24.5 cm</option>
-            <option value="40">40 – Chiều dài chân 25.0 cm</option>
-            <option value="41">41 – Chiều dài chân 25.5 cm</option>
-            <option value="42">42 – Chiều dài chân 26.0 cm</option>
-            <option value="43">43 – Chiều dài chân 26.5 cm</option>
-          </select>
+        <!-- Selected size/color (pre-filled from page selection) -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-size">Size đã chọn</label>
+            <input id="f-size" type="text" name="size" readonly class="input-readonly">
+          </div>
+          <div class="form-group">
+            <label for="f-color">Màu đã chọn</label>
+            <input id="f-color" type="text" name="color" readonly class="input-readonly">
+          </div>
         </div>
         <div class="form-group">
           <label for="f-qty">Số lượng</label>
@@ -377,7 +309,6 @@
         </button>
       </form>
     </div>
-
     <div id="form-success" class="modal-success" hidden>
       <div class="success-ico"><i class="fas fa-check-circle"></i></div>
       <h3>Đặt hàng thành công!</h3>
@@ -386,6 +317,182 @@
     </div>
   </div>
 </div>
+
+<!-- ======= IMAGE MANAGER PANEL ======= -->
+<!-- Trigger button -->
+<button class="img-mgr-btn" id="imgMgrBtn" onclick="toggleImgMgr()" title="Quản lý ảnh sản phẩm">
+  <i class="fas fa-camera"></i>
+  <span>Ảnh SP</span>
+</button>
+
+<!-- Panel -->
+<div class="img-mgr" id="imgMgr">
+  <div class="img-mgr-header">
+    <div>
+      <h3><i class="fas fa-images"></i> Quản lý ảnh sản phẩm</h3>
+      <p>Kéo thả hoặc click để tải ảnh lên</p>
+    </div>
+    <button class="img-mgr-close" onclick="toggleImgMgr()"><i class="fas fa-times"></i></button>
+  </div>
+
+  <div class="img-mgr-body">
+
+    <!-- Slot: Hero image -->
+    <div class="img-slot">
+      <div class="slot-label">
+        <i class="fas fa-image"></i> Ảnh chính (Hero)
+        <span class="slot-hint">Khuyến nghị: 800×500px</span>
+      </div>
+      <div class="drop-zone" id="dz-hero"
+           ondragover="onDragOver(event,'dz-hero')"
+           ondragleave="onDragLeave('dz-hero')"
+           ondrop="onDrop(event,'hero')"
+           onclick="document.getElementById('inp-hero').click()">
+        <div class="dz-placeholder" id="ph-hero">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p>Kéo ảnh vào đây hoặc <strong>click để chọn</strong></p>
+          <small>JPG, PNG, WebP – tối đa 5MB</small>
+        </div>
+        <img class="dz-preview" id="pv-hero" src="" alt="Hero preview">
+      </div>
+      <div class="slot-actions">
+        <label class="btn-slot-upload">
+          <input type="file" id="inp-hero" accept="image/*" onchange="onFileSelect(event,'hero')">
+          <i class="fas fa-upload"></i> Chọn ảnh
+        </label>
+        <button class="btn-slot-delete" id="del-hero" onclick="deleteImg('hero')">
+          <i class="fas fa-trash-alt"></i> Xóa
+        </button>
+      </div>
+    </div>
+
+    <!-- Slot: Feature 1 -->
+    <div class="img-slot">
+      <div class="slot-label">
+        <i class="fas fa-star"></i> Ảnh: Da bò cao cấp
+        <span class="slot-hint">Khuyến nghị: 400×400px</span>
+      </div>
+      <div class="drop-zone dz-sq" id="dz-feat1"
+           ondragover="onDragOver(event,'dz-feat1')"
+           ondragleave="onDragLeave('dz-feat1')"
+           ondrop="onDrop(event,'feat1')"
+           onclick="document.getElementById('inp-feat1').click()">
+        <div class="dz-placeholder" id="ph-feat1">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p><strong>Click để chọn</strong></p>
+        </div>
+        <img class="dz-preview" id="pv-feat1" src="" alt="Feat 1 preview">
+      </div>
+      <div class="slot-actions">
+        <label class="btn-slot-upload">
+          <input type="file" id="inp-feat1" accept="image/*" onchange="onFileSelect(event,'feat1')">
+          <i class="fas fa-upload"></i> Chọn ảnh
+        </label>
+        <button class="btn-slot-delete" id="del-feat1" onclick="deleteImg('feat1')">
+          <i class="fas fa-trash-alt"></i> Xóa
+        </button>
+      </div>
+    </div>
+
+    <!-- Slot: Feature 2 -->
+    <div class="img-slot">
+      <div class="slot-label">
+        <i class="fas fa-feather-alt"></i> Ảnh: Êm ái tối đa
+        <span class="slot-hint">Khuyến nghị: 400×400px</span>
+      </div>
+      <div class="drop-zone dz-sq" id="dz-feat2"
+           ondragover="onDragOver(event,'dz-feat2')"
+           ondragleave="onDragLeave('dz-feat2')"
+           ondrop="onDrop(event,'feat2')"
+           onclick="document.getElementById('inp-feat2').click()">
+        <div class="dz-placeholder" id="ph-feat2">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p><strong>Click để chọn</strong></p>
+        </div>
+        <img class="dz-preview" id="pv-feat2" src="" alt="Feat 2 preview">
+      </div>
+      <div class="slot-actions">
+        <label class="btn-slot-upload">
+          <input type="file" id="inp-feat2" accept="image/*" onchange="onFileSelect(event,'feat2')">
+          <i class="fas fa-upload"></i> Chọn ảnh
+        </label>
+        <button class="btn-slot-delete" id="del-feat2" onclick="deleteImg('feat2')">
+          <i class="fas fa-trash-alt"></i> Xóa
+        </button>
+      </div>
+    </div>
+
+    <!-- Slot: Feature 3 -->
+    <div class="img-slot">
+      <div class="slot-label">
+        <i class="fas fa-shoe-prints"></i> Ảnh: Đế cao su
+        <span class="slot-hint">Khuyến nghị: 400×400px</span>
+      </div>
+      <div class="drop-zone dz-sq" id="dz-feat3"
+           ondragover="onDragOver(event,'dz-feat3')"
+           ondragleave="onDragLeave('dz-feat3')"
+           ondrop="onDrop(event,'feat3')"
+           onclick="document.getElementById('inp-feat3').click()">
+        <div class="dz-placeholder" id="ph-feat3">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p><strong>Click để chọn</strong></p>
+        </div>
+        <img class="dz-preview" id="pv-feat3" src="" alt="Feat 3 preview">
+      </div>
+      <div class="slot-actions">
+        <label class="btn-slot-upload">
+          <input type="file" id="inp-feat3" accept="image/*" onchange="onFileSelect(event,'feat3')">
+          <i class="fas fa-upload"></i> Chọn ảnh
+        </label>
+        <button class="btn-slot-delete" id="del-feat3" onclick="deleteImg('feat3')">
+          <i class="fas fa-trash-alt"></i> Xóa
+        </button>
+      </div>
+    </div>
+
+    <!-- Slot: Feature 4 -->
+    <div class="img-slot">
+      <div class="slot-label">
+        <i class="fas fa-gem"></i> Ảnh: Thiết kế tinh tế
+        <span class="slot-hint">Khuyến nghị: 400×400px</span>
+      </div>
+      <div class="drop-zone dz-sq" id="dz-feat4"
+           ondragover="onDragOver(event,'dz-feat4')"
+           ondragleave="onDragLeave('dz-feat4')"
+           ondrop="onDrop(event,'feat4')"
+           onclick="document.getElementById('inp-feat4').click()">
+        <div class="dz-placeholder" id="ph-feat4">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p><strong>Click để chọn</strong></p>
+        </div>
+        <img class="dz-preview" id="pv-feat4" src="" alt="Feat 4 preview">
+      </div>
+      <div class="slot-actions">
+        <label class="btn-slot-upload">
+          <input type="file" id="inp-feat4" accept="image/*" onchange="onFileSelect(event,'feat4')">
+          <i class="fas fa-upload"></i> Chọn ảnh
+        </label>
+        <button class="btn-slot-delete" id="del-feat4" onclick="deleteImg('feat4')">
+          <i class="fas fa-trash-alt"></i> Xóa
+        </button>
+      </div>
+    </div>
+
+  </div><!-- /.img-mgr-body -->
+
+  <div class="img-mgr-footer">
+    <p><i class="fas fa-info-circle"></i> Ảnh được lưu trên trình duyệt này</p>
+    <button class="btn-reset-all" onclick="resetAllImages()">
+      <i class="fas fa-redo"></i> Xóa tất cả ảnh
+    </button>
+  </div>
+</div>
+
+<!-- Panel backdrop -->
+<div class="img-mgr-backdrop" id="imgMgrBackdrop" onclick="toggleImgMgr()"></div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
 
 <script src="js/main.js"></script>
 </body>
