@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POWERMAX Generators – Máy Phát Điện Chính Hãng</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<header id="header">
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">
+        <div class="logo-brand"><span class="pw">POWER</span><span class="mx">MAX</span></div>
+        <div class="logo-sub">GENERATORS</div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">TRANG CHỦ</a></li>
+        <li><a href="#products">SẢN PHẨM</a></li>
+        <li><a href="#applications">ỨNG DỤNG</a></li>
+        <li><a href="#why-us">DỊCH VỤ</a></li>
+        <li><a href="#news">TIN TỨC</a></li>
+        <li><a href="#contact-section">LIÊN HỆ</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="hotline">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <small>Hotline hỗ trợ</small>
+            <strong>1800 1558</strong>
+          </div>
+        </div>
+        <button class="btn-quote" onclick="openModal()">NHẬN BÁO GIÁ</button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ======= HERO SLIDER ======= -->
+<section id="hero">
+  <div class="slider-wrap">
+
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="hero-badge">MÁY PHÁT ĐIỆN POWERMAX</span>
+          <h1>NĂNG LƯỢNG ỔN ĐỊNH<br>VẬN HÀNH <em>BỀN BỈ</em></h1>
+          <p>Giải pháp nguồn điện dự phòng hoàn hảo cho mọi nhu cầu từ gia đình đến doanh nghiệp.</p>
+          <div class="hero-features">
+            <div class="feat"><i class="fas fa-cog"></i><div><strong>Công suất đa dạng</strong><small>10kVA – 2500kVA</small></div></div>
+            <div class="feat"><i class="fas fa-gas-pump"></i><div><strong>Tiết kiệm nhiên liệu</strong><small>Hiệu suất tối ưu</small></div></div>
+            <div class="feat"><i class="fas fa-bolt"></i><div><strong>Vận hành bền bỉ</strong><small>Độ bền vượt trội</small></div></div>
+            <div class="feat"><i class="fas fa-shield-alt"></i><div><strong>Bảo hành chính hãng</strong><small>Lên đến 24 tháng</small></div></div>
+          </div>
+          <div class="hero-btns">
+            <a href="#products" class="btn btn-primary">XEM SẢN PHẨM</a>
+            <button class="btn btn-outline" onclick="openModal()">NHẬN TƯ VẤN</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <!-- Industrial cabinet generator SVG -->
+          <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" class="gen-svg">
+            <defs>
+              <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1e6fc9"/>
+                <stop offset="100%" style="stop-color:#0d47a1"/>
+              </linearGradient>
+              <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#1565c0"/>
+                <stop offset="100%" style="stop-color:#0a3d8f"/>
+              </linearGradient>
+              <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+                <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="rgba(0,0,0,0.5)"/>
+              </filter>
+            </defs>
+            <!-- Base frame -->
+            <rect x="45" y="310" width="430" height="22" rx="4" fill="#1a2744" filter="url(#shadow)"/>
+            <!-- Main body -->
+            <rect x="55" y="70" width="410" height="246" rx="10" fill="url(#bodyGrad)" filter="url(#shadow)"/>
+            <!-- Top cap -->
+            <rect x="55" y="70" width="410" height="32" rx="10" fill="#0d47a1"/>
+            <rect x="55" y="90" width="410" height="12" fill="#0a3d8f"/>
+            <!-- Exhaust pipe -->
+            <rect x="170" y="40" width="22" height="35" rx="3" fill="#546e7a"/>
+            <rect x="164" y="36" width="34" height="10" rx="4" fill="#37474f"/>
+            <ellipse cx="181" cy="37" rx="16" ry="4" fill="#263238"/>
+            <!-- Left vent panel -->
+            <rect x="65" y="115" width="110" height="192" rx="5" fill="url(#panelGrad)"/>
+            <g fill="#0a3d8f" opacity="0.9">
+              <rect x="73" y="123" width="94" height="4" rx="2"/>
+              <rect x="73" y="134" width="94" height="4" rx="2"/>
+              <rect x="73" y="145" width="94" height="4" rx="2"/>
+              <rect x="73" y="156" width="94" height="4" rx="2"/>
+              <rect x="73" y="167" width="94" height="4" rx="2"/>
+              <rect x="73" y="178" width="94" height="4" rx="2"/>
+              <rect x="73" y="189" width="94" height="4" rx="2"/>
+              <rect x="73" y="200" width="94" height="4" rx="2"/>
+              <rect x="73" y="211" width="94" height="4" rx="2"/>
+              <rect x="73" y="222" width="94" height="4" rx="2"/>
+              <rect x="73" y="233" width="94" height="4" rx="2"/>
+              <rect x="73" y="244" width="94" height="4" rx="2"/>
+              <rect x="73" y="255" width="94" height="4" rx="2"/>
+              <rect x="73" y="266" width="94" height="4" rx="2"/>
+              <rect x="73" y="277" width="94" height="4" rx="2"/>
+              <rect x="73" y="288" width="94" height="4" rx="2"/>
+              <rect x="73" y="299" width="94" height="4" rx="2"/>
+            </g>
+            <!-- Right vent panel -->
+            <rect x="345" y="115" width="110" height="192" rx="5" fill="url(#panelGrad)"/>
+            <g fill="#0a3d8f" opacity="0.9">
+              <rect x="353" y="123" width="94" height="4" rx="2"/>
+              <rect x="353" y="134" width="94" height="4" rx="2"/>
+              <rect x="353" y="145" width="94" height="4" rx="2"/>
+              <rect x="353" y="156" width="94" height="4" rx="2"/>
+              <rect x="353" y="167" width="94" height="4" rx="2"/>
+              <rect x="353" y="178" width="94" height="4" rx="2"/>
+              <rect x="353" y="189" width="94" height="4" rx="2"/>
+              <rect x="353" y="200" width="94" height="4" rx="2"/>
+              <rect x="353" y="211" width="94" height="4" rx="2"/>
+              <rect x="353" y="222" width="94" height="4" rx="2"/>
+              <rect x="353" y="233" width="94" height="4" rx="2"/>
+              <rect x="353" y="244" width="94" height="4" rx="2"/>
+              <rect x="353" y="255" width="94" height="4" rx="2"/>
+              <rect x="353" y="266" width="94" height="4" rx="2"/>
+              <rect x="353" y="277" width="94" height="4" rx="2"/>
+              <rect x="353" y="288" width="94" height="4" rx="2"/>
+              <rect x="353" y="299" width="94" height="4" rx="2"/>
+            </g>
+            <!-- Control panel center -->
+            <rect x="190" y="105" width="140" height="202" rx="5" fill="#1a237e"/>
+            <rect x="198" y="118" width="124" height="80" rx="4" fill="#0d1b5e"/>
+            <!-- Gauges row -->
+            <circle cx="225" cy="152" r="16" fill="#1a2980"/><circle cx="225" cy="152" r="11" fill="#0d1b5e"/><line x1="225" y1="152" x2="231" y2="143" stroke="#f5b800" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="260" cy="152" r="16" fill="#1a2980"/><circle cx="260" cy="152" r="11" fill="#0d1b5e"/><line x1="260" y1="152" x2="254" y2="143" stroke="#4caf50" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="295" cy="152" r="16" fill="#1a2980"/><circle cx="295" cy="152" r="11" fill="#0d1b5e"/><line x1="295" y1="152" x2="301" y2="144" stroke="#f5b800" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Button row -->
+            <circle cx="214" cy="184" r="7" fill="#f5b800"/>
+            <circle cx="233" cy="184" r="7" fill="#4caf50"/>
+            <circle cx="252" cy="184" r="7" fill="#f44336"/>
+            <circle cx="271" cy="184" r="7" fill="#ffa726"/>
+            <circle cx="290" cy="184" r="7" fill="#4caf50"/>
+            <!-- Logo band -->
+            <rect x="200" y="205" width="120" height="2" fill="rgba(255,255,255,0.15)"/>
+            <text x="260" y="225" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="16" fill="white" letter-spacing="1">POWER<tspan fill="#f5b800">MAX</tspan></text>
+            <text x="260" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.5)" letter-spacing="3">GENERATORS</text>
+            <rect x="200" y="247" width="120" height="2" fill="rgba(255,255,255,0.15)"/>
+            <!-- Bottom controls -->
+            <rect x="200" y="258" width="120" height="36" rx="3" fill="#0d1b5e"/>
+            <rect x="207" y="264" width="50" height="6" rx="3" fill="#1565c0"/>
+            <rect x="207" y="275" width="50" height="6" rx="3" fill="#1565c0"/>
+            <rect x="262" y="264" width="50" height="6" rx="3" fill="#263238"/>
+            <rect x="262" y="275" width="50" height="6" rx="3" fill="#263238"/>
+            <!-- Yellow accent stripe -->
+            <rect x="55" y="302" width="410" height="14" fill="#f5b800"/>
+            <!-- Wheels -->
+            <circle cx="120" cy="328" r="17" fill="#263238"/>
+            <circle cx="120" cy="328" r="10" fill="#37474f"/>
+            <circle cx="120" cy="328" r="4" fill="#546e7a"/>
+            <circle cx="400" cy="328" r="17" fill="#263238"/>
+            <circle cx="400" cy="328" r="10" fill="#37474f"/>
+            <circle cx="400" cy="328" r="4" fill="#546e7a"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="hero-badge">CÔNG NGHỆ TIÊN TIẾN</span>
+          <h1>HIỆU SUẤT CAO<br>TIẾT KIỆM <em>NHIÊN LIỆU</em></h1>
+          <p>Máy phát điện sử dụng công nghệ động cơ hiện đại, tiết kiệm nhiên liệu tối đa, giảm thiểu chi phí vận hành.</p>
+          <div class="hero-btns">
+            <a href="#products" class="btn btn-primary">XEM SẢN PHẨM</a>
+            <button class="btn btn-outline" onclick="openModal()">NHẬN TƯ VẤN</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" class="gen-svg">
+            <rect x="60" y="310" width="400" height="20" rx="4" fill="#1a1a1a"/>
+            <rect x="70" y="75" width="380" height="240" rx="8" fill="#263238"/>
+            <rect x="70" y="75" width="380" height="28" rx="8" fill="#37474f"/>
+            <rect x="70" y="92" width="380" height="11" fill="#37474f"/>
+            <rect x="180" y="44" width="18" height="34" rx="3" fill="#546e7a"/>
+            <rect x="173" y="39" width="32" height="9" rx="4" fill="#455a64"/>
+            <rect x="82" y="118" width="100" height="185" rx="4" fill="#2e3f48"/>
+            <g fill="#1a2730" opacity="0.9">
+              <rect x="90" y="126" width="84" height="3" rx="1"/><rect x="90" y="136" width="84" height="3" rx="1"/>
+              <rect x="90" y="146" width="84" height="3" rx="1"/><rect x="90" y="156" width="84" height="3" rx="1"/>
+              <rect x="90" y="166" width="84" height="3" rx="1"/><rect x="90" y="176" width="84" height="3" rx="1"/>
+              <rect x="90" y="186" width="84" height="3" rx="1"/><rect x="90" y="196" width="84" height="3" rx="1"/>
+              <rect x="90" y="206" width="84" height="3" rx="1"/><rect x="90" y="216" width="84" height="3" rx="1"/>
+              <rect x="90" y="226" width="84" height="3" rx="1"/><rect x="90" y="236" width="84" height="3" rx="1"/>
+              <rect x="90" y="246" width="84" height="3" rx="1"/><rect x="90" y="256" width="84" height="3" rx="1"/>
+              <rect x="90" y="266" width="84" height="3" rx="1"/><rect x="90" y="276" width="84" height="3" rx="1"/>
+              <rect x="90" y="286" width="84" height="3" rx="1"/>
+            </g>
+            <rect x="338" y="118" width="100" height="185" rx="4" fill="#2e3f48"/>
+            <g fill="#1a2730" opacity="0.9">
+              <rect x="346" y="126" width="84" height="3" rx="1"/><rect x="346" y="136" width="84" height="3" rx="1"/>
+              <rect x="346" y="146" width="84" height="3" rx="1"/><rect x="346" y="156" width="84" height="3" rx="1"/>
+              <rect x="346" y="166" width="84" height="3" rx="1"/><rect x="346" y="176" width="84" height="3" rx="1"/>
+              <rect x="346" y="186" width="84" height="3" rx="1"/><rect x="346" y="196" width="84" height="3" rx="1"/>
+              <rect x="346" y="206" width="84" height="3" rx="1"/><rect x="346" y="216" width="84" height="3" rx="1"/>
+              <rect x="346" y="226" width="84" height="3" rx="1"/><rect x="346" y="236" width="84" height="3" rx="1"/>
+              <rect x="346" y="246" width="84" height="3" rx="1"/><rect x="346" y="256" width="84" height="3" rx="1"/>
+              <rect x="346" y="266" width="84" height="3" rx="1"/><rect x="346" y="276" width="84" height="3" rx="1"/>
+              <rect x="346" y="286" width="84" height="3" rx="1"/>
+            </g>
+            <rect x="196" y="108" width="128" height="195" rx="4" fill="#37474f"/>
+            <rect x="205" y="120" width="110" height="76" rx="3" fill="#263238"/>
+            <circle cx="232" cy="155" r="14" fill="#37474f"/><circle cx="232" cy="155" r="9" fill="#263238"/><line x1="232" y1="155" x2="238" y2="146" stroke="#f5b800" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="260" cy="155" r="14" fill="#37474f"/><circle cx="260" cy="155" r="9" fill="#263238"/><line x1="260" y1="155" x2="254" y2="147" stroke="#4caf50" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="288" cy="155" r="14" fill="#37474f"/><circle cx="288" cy="155" r="9" fill="#263238"/><line x1="288" y1="155" x2="293" y2="146" stroke="#f5b800" stroke-width="2" stroke-linecap="round"/>
+            <text x="260" y="225" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="16" fill="white">POWER<tspan fill="#f5b800">MAX</tspan></text>
+            <rect x="70" y="295" width="380" height="15" fill="#f5b800"/>
+            <circle cx="120" cy="326" r="15" fill="#1a1a1a"/><circle cx="120" cy="326" r="8" fill="#333"/>
+            <circle cx="400" cy="326" r="15" fill="#1a1a1a"/><circle cx="400" cy="326" r="8" fill="#333"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="hero-badge">BẢO HÀNH & DỊCH VỤ</span>
+          <h1>BẢO HÀNH TOÀN DIỆN<br>DỊCH VỤ <em>UY TÍN</em></h1>
+          <p>Cam kết bảo hành lên đến 24 tháng, đội ngũ kỹ thuật viên hỗ trợ 24/7 trên toàn quốc.</p>
+          <div class="hero-btns">
+            <button class="btn btn-primary" onclick="openModal()">NHẬN BÁO GIÁ</button>
+            <a href="#why-us" class="btn btn-outline">TÌM HIỂU THÊM</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" class="gen-svg">
+            <rect x="50" y="310" width="420" height="22" rx="5" fill="#1a2744"/>
+            <rect x="60" y="65" width="400" height="250" rx="10" fill="#eceff1"/>
+            <rect x="60" y="65" width="400" height="28" rx="10" fill="#cfd8dc"/>
+            <rect x="60" y="82" width="400" height="11" fill="#b0bec5"/>
+            <rect x="175" y="38" width="20" height="30" rx="3" fill="#78909c"/>
+            <rect x="168" y="34" width="34" height="9" rx="4" fill="#607d8b"/>
+            <rect x="72" y="108" width="105" height="200" rx="5" fill="#b0bec5"/>
+            <rect x="80" y="116" width="89" height="185" rx="3" fill="#90a4ae"/>
+            <g fill="#78909c" opacity="0.8">
+              <rect x="87" y="123" width="75" height="3" rx="1"/><rect x="87" y="132" width="75" height="3" rx="1"/>
+              <rect x="87" y="141" width="75" height="3" rx="1"/><rect x="87" y="150" width="75" height="3" rx="1"/>
+              <rect x="87" y="159" width="75" height="3" rx="1"/><rect x="87" y="168" width="75" height="3" rx="1"/>
+              <rect x="87" y="177" width="75" height="3" rx="1"/><rect x="87" y="186" width="75" height="3" rx="1"/>
+              <rect x="87" y="195" width="75" height="3" rx="1"/><rect x="87" y="204" width="75" height="3" rx="1"/>
+              <rect x="87" y="213" width="75" height="3" rx="1"/><rect x="87" y="222" width="75" height="3" rx="1"/>
+              <rect x="87" y="231" width="75" height="3" rx="1"/><rect x="87" y="240" width="75" height="3" rx="1"/>
+              <rect x="87" y="249" width="75" height="3" rx="1"/><rect x="87" y="258" width="75" height="3" rx="1"/>
+              <rect x="87" y="267" width="75" height="3" rx="1"/><rect x="87" y="276" width="75" height="3" rx="1"/>
+              <rect x="87" y="285" width="75" height="3" rx="1"/>
+            </g>
+            <rect x="343" y="108" width="105" height="200" rx="5" fill="#b0bec5"/>
+            <rect x="351" y="116" width="89" height="185" rx="3" fill="#90a4ae"/>
+            <g fill="#78909c" opacity="0.8">
+              <rect x="358" y="123" width="75" height="3" rx="1"/><rect x="358" y="132" width="75" height="3" rx="1"/>
+              <rect x="358" y="141" width="75" height="3" rx="1"/><rect x="358" y="150" width="75" height="3" rx="1"/>
+              <rect x="358" y="159" width="75" height="3" rx="1"/><rect x="358" y="168" width="75" height="3" rx="1"/>
+              <rect x="358" y="177" width="75" height="3" rx="1"/><rect x="358" y="186" width="75" height="3" rx="1"/>
+              <rect x="358" y="195" width="75" height="3" rx="1"/><rect x="358" y="204" width="75" height="3" rx="1"/>
+              <rect x="358" y="213" width="75" height="3" rx="1"/><rect x="358" y="222" width="75" height="3" rx="1"/>
+              <rect x="358" y="231" width="75" height="3" rx="1"/><rect x="358" y="240" width="75" height="3" rx="1"/>
+              <rect x="358" y="249" width="75" height="3" rx="1"/><rect x="358" y="258" width="75" height="3" rx="1"/>
+              <rect x="358" y="267" width="75" height="3" rx="1"/><rect x="358" y="276" width="75" height="3" rx="1"/>
+              <rect x="358" y="285" width="75" height="3" rx="1"/>
+            </g>
+            <rect x="188" y="96" width="144" height="212" rx="5" fill="#cfd8dc"/>
+            <rect x="197" y="110" width="126" height="80" rx="3" fill="#b0bec5"/>
+            <circle cx="226" cy="148" r="14" fill="#90a4ae"/><circle cx="226" cy="148" r="9" fill="#78909c"/><line x1="226" y1="148" x2="231" y2="139" stroke="#f57f17" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="260" cy="148" r="14" fill="#90a4ae"/><circle cx="260" cy="148" r="9" fill="#78909c"/><line x1="260" y1="148" x2="254" y2="140" stroke="#4caf50" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="294" cy="148" r="14" fill="#90a4ae"/><circle cx="294" cy="148" r="9" fill="#78909c"/><line x1="294" y1="148" x2="300" y2="140" stroke="#f57f17" stroke-width="2" stroke-linecap="round"/>
+            <text x="260" y="222" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="16" fill="#37474f">POWER<tspan fill="#e65100">MAX</tspan></text>
+            <rect x="60" y="298" width="400" height="12" fill="#f5b800"/>
+            <circle cx="110" cy="324" r="15" fill="#455a64"/><circle cx="110" cy="324" r="8" fill="#607d8b"/>
+            <circle cx="410" cy="324" r="15" fill="#455a64"/><circle cx="410" cy="324" r="8" fill="#607d8b"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider controls -->
+  <div class="slider-dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+  </div>
+  <button class="slider-prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+  <button class="slider-next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+</section>
+
+<!-- ======= PRODUCTS ======= -->
+<section id="products" class="section-products">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>SẢN PHẨM NỔI BẬT</h2>
+      <p>Đa dạng công suất – Phù hợp mọi nhu cầu</p>
+    </div>
+    <div class="products-grid">
+
+      <!-- Product 1: Dân dụng -->
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="50" width="170" height="100" rx="5" fill="#fbc02d"/>
+            <rect x="15" y="50" width="170" height="16" rx="5" fill="#f57f17"/>
+            <rect x="24" y="76" width="62" height="66" rx="3" fill="#e65100"/>
+            <circle cx="55" cy="109" r="26" fill="#bf360c"/>
+            <circle cx="55" cy="109" r="18" fill="#8d2500"/>
+            <circle cx="55" cy="109" r="7" fill="#37474f"/>
+            <g stroke="#fbc02d" stroke-width="2" fill="none">
+              <line x1="55" y1="84" x2="55" y2="89"/><line x1="68" y1="91" x2="64.5" y2="94.5"/>
+              <line x1="80" y1="109" x2="75" y2="109"/><line x1="68" y1="127" x2="64.5" y2="123.5"/>
+              <line x1="55" y1="134" x2="55" y2="129"/><line x1="42" y1="127" x2="45.5" y2="123.5"/>
+              <line x1="30" y1="109" x2="35" y2="109"/><line x1="42" y1="91" x2="45.5" y2="94.5"/>
+            </g>
+            <rect x="96" y="72" width="80" height="62" rx="3" fill="#ef6c00"/>
+            <rect x="104" y="80" width="64" height="38" rx="2" fill="#e65100"/>
+            <rect x="104" y="122" width="14" height="10" rx="1" fill="#fbc02d"/>
+            <rect x="122" y="122" width="14" height="10" rx="1" fill="#ef6c00"/>
+            <rect x="140" y="122" width="14" height="10" rx="1" fill="#fbc02d"/>
+            <rect x="158" y="122" width="14" height="10" rx="1" fill="#ef6c00"/>
+            <rect x="15" y="146" width="170" height="8" rx="2" fill="#e65100"/>
+            <circle cx="38" cy="154" r="9" fill="#37474f"/><circle cx="38" cy="154" r="5" fill="#546e7a"/>
+            <circle cx="162" cy="154" r="9" fill="#37474f"/><circle cx="162" cy="154" r="5" fill="#546e7a"/>
+          </svg>
+        </div>
+        <div class="product-info">
+          <h3>Máy phát điện dân dụng</h3>
+          <p class="spec">10kVA – 50kVA</p>
+          <a href="#" class="view-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Product 2: Công nghiệp -->
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="40" width="180" height="115" rx="7" fill="#1565c0"/>
+            <rect x="10" y="40" width="180" height="22" rx="7" fill="#0d47a1"/>
+            <rect x="10" y="52" width="180" height="10" fill="#0a3d8f"/>
+            <rect x="96" y="20" width="16" height="22" rx="2" fill="#546e7a"/><rect x="89" y="16" width="30" height="7" rx="3" fill="#455a64"/>
+            <rect x="20" y="74" width="66" height="74" rx="4" fill="#1976d2"/>
+            <g fill="#0d47a1" opacity="0.9">
+              <rect x="27" y="81" width="52" height="3" rx="1"/><rect x="27" y="90" width="52" height="3" rx="1"/>
+              <rect x="27" y="99" width="52" height="3" rx="1"/><rect x="27" y="108" width="52" height="3" rx="1"/>
+              <rect x="27" y="117" width="52" height="3" rx="1"/><rect x="27" y="126" width="52" height="3" rx="1"/>
+              <rect x="27" y="135" width="52" height="3" rx="1"/>
+            </g>
+            <rect x="114" y="74" width="66" height="74" rx="4" fill="#1976d2"/>
+            <g fill="#0d47a1" opacity="0.9">
+              <rect x="121" y="81" width="52" height="3" rx="1"/><rect x="121" y="90" width="52" height="3" rx="1"/>
+              <rect x="121" y="99" width="52" height="3" rx="1"/><rect x="121" y="108" width="52" height="3" rx="1"/>
+              <rect x="121" y="117" width="52" height="3" rx="1"/><rect x="121" y="126" width="52" height="3" rx="1"/>
+              <rect x="121" y="135" width="52" height="3" rx="1"/>
+            </g>
+            <text x="100" y="116" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="11" fill="white">POWER<tspan fill="#fbc02d">MAX</tspan></text>
+            <rect x="10" y="147" width="180" height="10" fill="#f5b800"/>
+            <circle cx="35" cy="157" r="9" fill="#263238"/><circle cx="165" cy="157" r="9" fill="#263238"/>
+          </svg>
+        </div>
+        <div class="product-info">
+          <h3>Máy phát điện công nghiệp</h3>
+          <p class="spec">60kVA – 500kVA</p>
+          <a href="#" class="view-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Product 3: Siêu êm -->
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="45" width="170" height="110" rx="9" fill="#eceff1"/>
+            <rect x="15" y="45" width="170" height="24" rx="9" fill="#cfd8dc"/>
+            <rect x="15" y="58" width="170" height="11" fill="#b0bec5"/>
+            <rect x="92" y="22" width="16" height="25" rx="2" fill="#78909c"/><rect x="85" y="18" width="30" height="8" rx="4" fill="#607d8b"/>
+            <rect x="24" y="82" width="58" height="66" rx="4" fill="#b0bec5"/>
+            <rect x="31" y="89" width="44" height="52" rx="2" fill="#90a4ae"/>
+            <g fill="#78909c" opacity="0.8">
+              <rect x="35" y="94" width="36" height="3" rx="1"/><rect x="35" y="102" width="36" height="3" rx="1"/>
+              <rect x="35" y="110" width="36" height="3" rx="1"/><rect x="35" y="118" width="36" height="3" rx="1"/>
+              <rect x="35" y="126" width="36" height="3" rx="1"/>
+            </g>
+            <rect x="118" y="82" width="58" height="66" rx="4" fill="#b0bec5"/>
+            <rect x="125" y="89" width="44" height="52" rx="2" fill="#90a4ae"/>
+            <g fill="#78909c" opacity="0.8">
+              <rect x="129" y="94" width="36" height="3" rx="1"/><rect x="129" y="102" width="36" height="3" rx="1"/>
+              <rect x="129" y="110" width="36" height="3" rx="1"/><rect x="129" y="118" width="36" height="3" rx="1"/>
+              <rect x="129" y="126" width="36" height="3" rx="1"/>
+            </g>
+            <text x="100" y="116" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="11" fill="#37474f">POWER<tspan fill="#e65100">MAX</tspan></text>
+            <rect x="15" y="146" width="170" height="10" fill="#78909c"/>
+            <circle cx="40" cy="156" r="9" fill="#455a64"/><circle cx="160" cy="156" r="9" fill="#455a64"/>
+          </svg>
+        </div>
+        <div class="product-info">
+          <h3>Máy phát điện siêu êm</h3>
+          <p class="spec">20kVA – 1000kVA</p>
+          <a href="#" class="view-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Product 4: Container -->
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="38" width="184" height="112" rx="5" fill="#2e7d32"/>
+            <rect x="8" y="38" width="184" height="16" rx="5" fill="#1b5e20"/>
+            <rect x="8" y="46" width="184" height="8" fill="#1b5e20"/>
+            <rect x="12" y="58" width="176" height="90" fill="#388e3c"/>
+            <g stroke="#2e7d32" stroke-width="2.5" fill="none">
+              <line x1="48" y1="58" x2="48" y2="148"/><line x1="88" y1="58" x2="88" y2="148"/>
+              <line x1="112" y1="58" x2="112" y2="148"/><line x1="152" y1="58" x2="152" y2="148"/>
+            </g>
+            <g fill="#1b5e20" opacity="0.9">
+              <rect x="15" y="64" width="28" height="6" rx="1"/><rect x="15" y="76" width="28" height="6" rx="1"/>
+              <rect x="15" y="88" width="28" height="6" rx="1"/><rect x="15" y="100" width="28" height="6" rx="1"/>
+              <rect x="15" y="112" width="28" height="6" rx="1"/><rect x="15" y="124" width="28" height="6" rx="1"/>
+              <rect x="157" y="64" width="28" height="6" rx="1"/><rect x="157" y="76" width="28" height="6" rx="1"/>
+              <rect x="157" y="88" width="28" height="6" rx="1"/><rect x="157" y="100" width="28" height="6" rx="1"/>
+              <rect x="157" y="112" width="28" height="6" rx="1"/><rect x="157" y="124" width="28" height="6" rx="1"/>
+            </g>
+            <rect x="90" y="62" width="20" height="84" rx="2" fill="#1b5e20"/>
+            <text x="100" y="103" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="9" fill="white">POWER</text>
+            <text x="100" y="116" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="9" fill="#fbc02d">MAX</text>
+            <!-- Corner connectors -->
+            <rect x="8" y="38" width="11" height="11" rx="1" fill="#1b5e20"/><rect x="181" y="38" width="11" height="11" rx="1" fill="#1b5e20"/>
+            <rect x="8" y="139" width="11" height="11" rx="1" fill="#1b5e20"/><rect x="181" y="139" width="11" height="11" rx="1" fill="#1b5e20"/>
+            <rect x="8" y="148" width="184" height="10" fill="#1b5e20"/>
+            <rect x="16" y="156" width="40" height="9" rx="2" fill="#1a1a1a"/>
+            <rect x="144" y="156" width="40" height="9" rx="2" fill="#1a1a1a"/>
+          </svg>
+        </div>
+        <div class="product-info">
+          <h3>Máy phát điện container</h3>
+          <p class="spec">500kVA – 2500kVA</p>
+          <a href="#" class="view-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= WHY POWERMAX ======= -->
+<section id="why-us" class="section-why">
+  <div class="container">
+    <h2 class="fade-up">TẠI SAO CHỌN POWERMAX?</h2>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon"><i class="fas fa-certificate"></i></div>
+        <h3>SẢN PHẨM CHÍNH HÃNG</h3>
+        <p>Nhập khẩu chính hãng CO, CQ đầy đủ</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><i class="fas fa-tags"></i></div>
+        <h3>GIÁ CẠNH TRANH</h3>
+        <p>Giá tốt nhất thị trường. Nhiều ưu đãi hấp dẫn</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><i class="fas fa-headset"></i></div>
+        <h3>DỊCH VỤ CHUYÊN NGHIỆP</h3>
+        <p>Tư vấn tận tâm. Hỗ trợ kỹ thuật 24/7</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>BẢO HÀNH UY TÍN</h3>
+        <p>Bảo hành lên đến 24 tháng. Hỗ trợ nhanh chóng</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= APPLICATIONS ======= -->
+<section id="applications" class="section-apps">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>ỨNG DỤNG ĐA DẠNG</h2>
+      <p>Giải pháp nguồn điện cho mọi lĩnh vực</p>
+    </div>
+    <div class="apps-grid">
+      <div class="app-card fade-up"><div class="app-icon"><i class="fas fa-home"></i></div><p>Gia đình &amp; Văn phòng</p></div>
+      <div class="app-card fade-up"><div class="app-icon"><i class="fas fa-building"></i></div><p>Tòa nhà &amp; Chung cư</p></div>
+      <div class="app-card fade-up"><div class="app-icon"><i class="fas fa-industry"></i></div><p>Nhà máy &amp; KCN</p></div>
+      <div class="app-card fade-up"><div class="app-icon"><i class="fas fa-hospital"></i></div><p>Bệnh viện &amp; Y tế</p></div>
+      <div class="app-card fade-up"><div class="app-icon"><i class="fas fa-hotel"></i></div><p>Khách sạn &amp; Resort</p></div>
+      <div class="app-card fade-up"><div class="app-icon"><i class="fas fa-broadcast-tower"></i></div><p>Viễn thông &amp; Truyền thông</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CONTACT CTA ======= -->
+<section id="contact-section" class="section-cta">
+  <div class="container">
+    <div class="cta-content fade-up">
+      <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+      <p>Đội ngũ tư vấn của chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+      <div class="cta-contacts">
+        <div class="cta-item"><i class="fas fa-phone-alt"></i><span>1800 1558</span></div>
+        <div class="cta-item"><i class="fas fa-envelope"></i><span>info@powermax.vn</span></div>
+        <div class="cta-item"><i class="fas fa-map-marker-alt"></i><span>Hà Nội &amp; TP. Hồ Chí Minh</span></div>
+      </div>
+      <button class="btn btn-primary btn-lg" onclick="openModal()">NHẬN TƯ VẤN NGAY <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo footer-logo"><div class="logo-brand"><span class="pw">POWER</span><span class="mx">MAX</span></div><div class="logo-sub">GENERATORS</div></div>
+        <p>Nhà cung cấp máy phát điện chính hãng hàng đầu Việt Nam. Cam kết chất lượng – Uy tín – Bền vững.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Zalo"><i class="fas fa-comment-dots"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="#">Máy phát điện dân dụng</a></li>
+          <li><a href="#">Máy phát điện công nghiệp</a></li>
+          <li><a href="#">Máy phát điện siêu êm</a></li>
+          <li><a href="#">Máy phát điện container</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li><a href="#">Bảo trì – Bảo dưỡng</a></li>
+          <li><a href="#">Sửa chữa</a></li>
+          <li><a href="#">Cho thuê máy phát</a></li>
+          <li><a href="#">Tư vấn kỹ thuật</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <ul class="contact-list">
+          <li><i class="fas fa-phone-alt"></i> Hotline: 1800 1558</li>
+          <li><i class="fas fa-envelope"></i> info@powermax.vn</li>
+          <li><i class="fas fa-map-marker-alt"></i> Hà Nội &amp; TP. HCM</li>
+          <li><i class="fas fa-clock"></i> T2 – T7: 8:00 – 17:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 POWERMAX Generators. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======= CONTACT MODAL ======= -->
+<div id="modal" class="modal-overlay" onclick="overlayClick(event)">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" onclick="closeModal()" aria-label="Đóng"><i class="fas fa-times"></i></button>
+
+    <div id="modal-form-wrap">
+      <div class="modal-head">
+        <h2 id="modal-title">NHẬN TƯ VẤN &amp; BÁO GIÁ</h2>
+        <p>Điền thông tin để được tư vấn miễn phí trong 24 giờ</p>
+      </div>
+      <form id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-name">Họ và tên <span class="req">*</span></label>
+            <input id="f-name" type="text" name="from_name" placeholder="Nguyễn Văn A" required>
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Số điện thoại <span class="req">*</span></label>
+            <input id="f-phone" type="tel" name="phone" placeholder="0912 345 678" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="f-email">Email</label>
+          <input id="f-email" type="email" name="from_email" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+          <label for="f-product">Sản phẩm quan tâm</label>
+          <select id="f-product" name="product">
+            <option value="">-- Chọn loại máy phát điện --</option>
+            <option value="Máy phát điện dân dụng (10–50kVA)">Máy phát điện dân dụng (10–50kVA)</option>
+            <option value="Máy phát điện công nghiệp (60–500kVA)">Máy phát điện công nghiệp (60–500kVA)</option>
+            <option value="Máy phát điện siêu êm (20–1000kVA)">Máy phát điện siêu êm (20–1000kVA)</option>
+            <option value="Máy phát điện container (500–2500kVA)">Máy phát điện container (500–2500kVA)</option>
+            <option value="Khác / Chưa xác định">Khác / Chưa xác định</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="f-msg">Nội dung</label>
+          <textarea id="f-msg" name="message" rows="4" placeholder="Mô tả nhu cầu của bạn..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+          <span class="btn-label">GỬI YÊU CẦU TƯ VẤN</span>
+          <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i> Đang gửi...</span>
+        </button>
+      </form>
+    </div>
+
+    <div id="modal-success" class="modal-success" hidden>
+      <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+      <h3>Gửi thành công!</h3>
+      <p>Chúng tôi đã nhận được yêu cầu của bạn và sẽ liên hệ lại trong vòng <strong>24 giờ</strong>.</p>
+      <button class="btn btn-primary" onclick="closeModal()">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Lên đầu trang">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
