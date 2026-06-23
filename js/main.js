@@ -203,7 +203,7 @@ function showSuccess() {
 /* =========================================
    PRODUCT IMAGE SLIDER
    ========================================= */
-let psIdx = 0;
+var psIdx = 0;
 
 function slideTo(n) {
   const slides = document.querySelectorAll('.ps-slide');
