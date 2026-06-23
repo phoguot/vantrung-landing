@@ -118,7 +118,7 @@ nav { flex:1; display:flex; justify-content:center; }
 /* =========================================
    PRODUCT SLIDER
    ========================================= */
-.prod-slider { width:100%; max-width:540px; user-select:none; }
+.prod-slider { width:100%; max-width:620px; user-select:none; }
 
 /* Main image display */
 .ps-main {
@@ -126,7 +126,7 @@ nav { flex:1; display:flex; justify-content:center; }
   background:var(--bg-hero);
   border-radius:14px;
   overflow:hidden;
-  aspect-ratio:4/3;
+  aspect-ratio:1/1;
 }
 .ps-track { width:100%; height:100%; position:relative; }
 
@@ -134,11 +134,12 @@ nav { flex:1; display:flex; justify-content:center; }
 .ps-slide {
   position:absolute; inset:0;
   display:flex; align-items:center; justify-content:center;
-  padding:20px;
+  padding:16px;
   opacity:0; transition:opacity .45s ease;
   pointer-events:none;
 }
 .ps-slide.active { opacity:1; pointer-events:auto; z-index:1; }
+.ps-slide img { width:100%; height:100%; object-fit:contain; }
 .ps-slide svg { animation:floatShoe 6s ease-in-out infinite; filter:drop-shadow(0 16px 30px rgba(0,0,0,.18)); }
 @keyframes floatShoe { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
 
