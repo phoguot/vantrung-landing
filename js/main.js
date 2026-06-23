@@ -200,3 +200,31 @@ function showSuccess() {
   formSucc.hidden        = false;
 }
 
+/* =========================================
+   PRODUCT IMAGE SLIDER
+   ========================================= */
+let psIdx = 0;
+
+function slideTo(n) {
+  const slides = document.querySelectorAll('.ps-slide');
+  const thumbs = document.querySelectorAll('.ps-thumb');
+  const dots   = document.querySelectorAll('.ps-dot');
+  const total  = slides.length;
+  psIdx = ((n % total) + total) % total;
+  slides.forEach((s, i) => s.classList.toggle('active', i === psIdx));
+  thumbs.forEach((t, i) => t.classList.toggle('active', i === psIdx));
+  dots.forEach((d, i)   => d.classList.toggle('active', i === psIdx));
+}
+
+// Touch / swipe support
+(function () {
+  const track = document.getElementById('psTrack');
+  if (!track) return;
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) slideTo(psIdx + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+})();
+
