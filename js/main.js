@@ -10,9 +10,10 @@
    4. Copy URL web app → paste vào APPS_SCRIPT_URL bên dưới
    ========================================= */
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzO6U-298E2RkX3XtXlWMjei7dks-6N5gzx3grRWJlm-c-wOPGv3b2Xp755rUVnPSbm/exec';   // ← thay bằng URL sau khi deploy
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDC5IpQuSYjasefzySGJEonPsUacNNB3ZiwjVG3xMc4o82FOkq_hbFWXbusScAowR8Sw/exec';   // ← thay bằng URL sau khi deploy
 const TO_EMAIL        = 'trungthanhnguyen382000@gmail.com';  // dùng cho fallback mailto
-const UNIT_PRICE      = 699000;
+const UNIT_PRICE      = 189000;
+const SHIP      = 30000;
 
 /* =========================================
    HEADER – sticky
@@ -128,7 +129,7 @@ function changeQty(delta) {
 
 function updateTotal(qty) {
   const el = document.getElementById('total-price');
-  if (el) el.textContent = (UNIT_PRICE * qty).toLocaleString('vi-VN') + 'đ';
+  if (el) el.textContent = ((UNIT_PRICE * qty) + SHIP).toLocaleString('vi-VN') + 'đ';
 }
 
 /* =========================================
@@ -148,7 +149,7 @@ function handleSubmit(e) {
     quantity:  qty,
     address:   data.get('address')   || 'Chưa cung cấp',
     message:   data.get('message')   || '',
-    total:     (UNIT_PRICE * qty).toLocaleString('vi-VN') + 'đ',
+    total:     ((UNIT_PRICE * qty) + SHIP).toLocaleString('vi-VN') + 'đ',
   };
 
   btn.disabled = true;
@@ -214,6 +215,56 @@ function slideTo(n) {
   thumbs.forEach((t, i) => t.classList.toggle('active', i === psIdx));
   dots.forEach((d, i)   => d.classList.toggle('active', i === psIdx));
 }
+
+/* =========================================
+   SOCIAL PROOF POPUP
+   ========================================= */
+(function () {
+  const buyers = [
+    { name: 'Vinh Trần',    initials: 'VT', color: '#2d5a8e', time: '1 giờ trước'      },
+    { name: 'Hoàng Minh',   initials: 'HM', color: '#4a7c59', time: '2 giờ trước'      },
+    { name: 'Đức Anh',      initials: 'ĐA', color: '#7d5230', time: 'vài phút trước'   },
+    { name: 'Thanh Sơn',    initials: 'TS', color: '#2d7c6e', time: '30 phút trước'    },
+    { name: 'Minh Khoa',    initials: 'MK', color: '#8e4a2d', time: '45 phút trước'    },
+    { name: 'Phú Quý',      initials: 'PQ', color: '#5a4a8e', time: '3 giờ trước'      },
+    { name: 'Văn Tuấn',     initials: 'VT', color: '#4a7c59', time: 'vài phút trước'   },
+    { name: 'Quốc Bảo',     initials: 'QB', color: '#7d5230', time: '15 phút trước'    },
+  ];
+
+  const popup   = document.getElementById('social-popup');
+  const nameEl  = document.getElementById('sp-name');
+  const timeEl  = document.getElementById('sp-time');
+  const avatarEl = document.getElementById('sp-avatar');
+
+  let idx = 0;
+  let hideTimer, nextTimer;
+
+  function showNext() {
+    const b = buyers[idx % buyers.length];
+    avatarEl.textContent       = b.initials;
+    avatarEl.style.background  = b.color;
+    nameEl.textContent         = b.name;
+    timeEl.textContent         = b.time;
+
+    popup.classList.add('sp-show');
+    idx++;
+
+    hideTimer = setTimeout(() => {
+      popup.classList.remove('sp-show');
+      nextTimer = setTimeout(showNext, 6000);
+    }, 4500);
+  }
+
+  window.closeSocialPopup = function () {
+    clearTimeout(hideTimer);
+    clearTimeout(nextTimer);
+    popup.classList.remove('sp-show');
+    nextTimer = setTimeout(showNext, 8000);
+  };
+
+  // Bắt đầu sau 3 giây
+  setTimeout(showNext, 3000);
+})();
 
 // Touch / swipe support
 (function () {

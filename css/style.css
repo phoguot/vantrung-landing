@@ -444,3 +444,79 @@ footer { background:#1a1510; color:rgba(255,255,255,.65); padding:56px 0 0; }
   .benefit-item:last-child { border-bottom:none; }
   .product-code { font-size:3.5rem; }
 }
+
+/* === SOCIAL PROOF POPUP === */
+.social-popup {
+  position: fixed;
+  bottom: 24px;
+  left: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(0,0,0,.16);
+  padding: 12px 14px 12px 12px;
+  max-width: 290px;
+  transform: translateX(calc(-100% - 30px));
+  opacity: 0;
+  transition: transform .42s cubic-bezier(.34,1.36,.64,1), opacity .3s ease;
+  pointer-events: none;
+}
+.social-popup.sp-show {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.sp-avatar {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .5px;
+}
+.sp-body {
+  flex: 1;
+  min-width: 0;
+}
+.sp-body strong {
+  display: block;
+  font-size: .88rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sp-body span {
+  font-size: .78rem;
+  color: #333;
+}
+.sp-body p {
+  font-size: .72rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.sp-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: .9rem;
+  line-height: 1;
+  padding: 2px 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: color .2s;
+}
+.sp-close:hover { color: #555; }
+@media (max-width:480px) {
+  .social-popup { max-width: 260px; bottom: 16px; left: 12px; }
+}
