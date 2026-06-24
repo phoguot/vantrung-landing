@@ -154,7 +154,7 @@ function handleSubmit(e) {
   btn.disabled = true;
   btn.classList.add('loading');
 
-  if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL') {
+  if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbwPS2xtBxzX1UQ39bZfxUFdzOoC33Usf9T4s7JDugDesMk5ZEtPmC3LICL8KOANc2D6pg/exec') {
     // Gửi qua Google Apps Script (no-cors vì Apps Script không trả CORS header)
     fetch(APPS_SCRIPT_URL, {
       method: 'POST',
