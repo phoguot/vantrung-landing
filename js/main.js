@@ -1,24 +1,18 @@
 /* =========================================
    AGIAY – main.js
 
-   EMAIL SETUP (EmailJS):
-   1. Tạo tài khoản tại https://www.emailjs.com/
-   2. Add Email Service → Gmail
-   3. Tạo Email Template với các biến:
-      {{from_name}}, {{phone}}, {{size}}, {{color}},
-      {{quantity}}, {{address}}, {{message}}, {{total}}
-   4. Lấy Public Key từ Account → General
-   5. Thay 3 hằng số bên dưới.
+   EMAIL SETUP (Google Apps Script):
+   1. Vào https://script.google.com → New project
+   2. Paste nội dung Code.gs vào editor
+   3. Deploy → New deployment → Web app
+      - Execute as: Me
+      - Who has access: Anyone
+   4. Copy URL web app → paste vào APPS_SCRIPT_URL bên dưới
    ========================================= */
 
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-const TO_EMAIL            = 'eros.yun711@gmail.com';
-
-if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY' && typeof emailjs !== 'undefined') {
-  emailjs.init(EMAILJS_PUBLIC_KEY);
-}
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwPS2xtBxzX1UQ39bZfxUFdzOoC33Usf9T4s7JDugDesMk5ZEtPmC3LICL8KOANc2D6pg/exec';   // ← thay bằng URL sau khi deploy
+const TO_EMAIL        = 'trungthanhnguyen382000@gmail.com';  // dùng cho fallback mailto
+const UNIT_PRICE      = 699000;
 
 /* =========================================
    HEADER – sticky
@@ -59,7 +53,7 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
 
 /* =========================================
-   SIZE SELECTOR
+   SIZE / COLOR SELECTOR
    ========================================= */
 let selectedSize  = '41';
 let selectedColor = 'Đen';
@@ -83,13 +77,11 @@ document.getElementById('colorOptions').addEventListener('click', (e) => {
 /* =========================================
    ORDER MODAL
    ========================================= */
-const UNIT_PRICE = 699000;
-const modal      = document.getElementById('modal');
-const formWrap   = document.getElementById('form-wrap');
-const formSucc   = document.getElementById('form-success');
+const modal   = document.getElementById('modal');
+const formWrap = document.getElementById('form-wrap');
+const formSucc = document.getElementById('form-success');
 
 function openOrderModal() {
-  // Pre-fill size / color from page selection
   document.getElementById('f-size').value  = selectedSize  || 'Chưa chọn';
   document.getElementById('f-color').value = selectedColor || 'Chưa chọn';
   updateTotal(parseInt(document.getElementById('f-qty').value) || 1);
@@ -140,7 +132,7 @@ function updateTotal(qty) {
 }
 
 /* =========================================
-   FORM SUBMIT
+   FORM SUBMIT – Google Apps Script
    ========================================= */
 function handleSubmit(e) {
   e.preventDefault();
@@ -154,35 +146,42 @@ function handleSubmit(e) {
     size:      data.get('size')      || selectedSize  || 'Chưa chọn',
     color:     data.get('color')     || selectedColor || 'Chưa chọn',
     quantity:  qty,
-    address:   data.get('address')  || 'Chưa cung cấp',
-    message:   data.get('message')  || '',
+    address:   data.get('address')   || 'Chưa cung cấp',
+    message:   data.get('message')   || '',
     total:     (UNIT_PRICE * qty).toLocaleString('vi-VN') + 'đ',
-    product:   'Giày Lưới Da Nam BN0003',
-    to_email:  TO_EMAIL,
   };
 
   btn.disabled = true;
   btn.classList.add('loading');
 
-  const useEmailJS =
-    typeof emailjs !== 'undefined' &&
-    EMAILJS_SERVICE_ID  !== 'YOUR_SERVICE_ID' &&
-    EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID';
-
-  if (useEmailJS) {
-    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
-      .then(showSuccess)
-      .catch(err => { console.warn('EmailJS fallback:', err); openMailto(params); showSuccess(); });
+  if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL') {
+    // Gửi qua Google Apps Script (no-cors vì Apps Script không trả CORS header)
+    fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode:   'no-cors',          // Apps Script không hỗ trợ CORS → dùng no-cors
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+    })
+      .then(() => showSuccess())   // no-cors luôn resolve (opaque response), coi như thành công
+      .catch(() => {
+        // Nếu fetch thất bại hoàn toàn → fallback mailto
+        openMailto(params);
+        showSuccess();
+      });
   } else {
+    // Chưa cấu hình URL → fallback mailto
     openMailto(params);
     showSuccess();
   }
 }
 
+/* =========================================
+   FALLBACK – mở mailto khi chưa cấu hình
+   ========================================= */
 function openMailto(p) {
   const subject = encodeURIComponent(`[AGIAY] Đơn hàng BN0003 – ${p.from_name}`);
   const body    = encodeURIComponent(
-    `Sản phẩm: ${p.product}\n` +
+    `Sản phẩm: Giày Lưới Da Nam BN0003\n` +
     `Họ tên:   ${p.from_name}\n` +
     `SĐT:      ${p.phone}\n` +
     `Size:     ${p.size}\n` +
@@ -227,4 +226,3 @@ function slideTo(n) {
     if (Math.abs(dx) > 40) slideTo(psIdx + (dx < 0 ? 1 : -1));
   }, { passive: true });
 })();
-
