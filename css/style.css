@@ -238,6 +238,69 @@ nav { flex:1; display:flex; justify-content:center; }
 .why-card p { font-size:.82rem; color:var(--muted); line-height:1.65; }
 
 /* =========================================
+   REVIEWS
+   ========================================= */
+#reviews { background:var(--bg-ben); padding:72px 0; }
+
+/* Summary block */
+.rv-summary {
+  display:flex; align-items:center; gap:48px;
+  background:#fff; border:1px solid var(--border);
+  border-radius:14px; padding:32px 40px; margin-bottom:40px;
+}
+.rv-score { text-align:center; flex-shrink:0; }
+.rv-big-wrap { display:flex; align-items:baseline; justify-content:center; gap:2px; }
+.rv-big { font-size:3.6rem; font-weight:900; color:var(--text); line-height:1; }
+.rv-denom { font-size:1.4rem; font-weight:600; color:var(--muted); }
+.rv-score .rv-stars { color:#f5a623; font-size:1.25rem; margin:6px 0 4px; display:flex; gap:3px; justify-content:center; }
+.rv-count { font-size:.8rem; color:var(--muted); }
+
+/* Bar rows */
+.rv-bars { flex:1; display:flex; flex-direction:column; gap:9px; }
+.rv-bar-row { display:flex; align-items:center; gap:10px; }
+.rv-lbl { font-size:.78rem; font-weight:600; color:var(--muted); width:36px; display:flex; align-items:center; gap:3px; flex-shrink:0; }
+.rv-s { font-size:.7rem; color:#f5a623; }
+.rv-bar { flex:1; height:10px; background:#ede4d8; border-radius:99px; overflow:hidden; }
+.rv-fill { height:100%; background:#f5a623; border-radius:99px; transition:width .6s ease; }
+.rv-f4 { background:#f5c542; }
+.rv-f3 { background:#ccc; }
+.rv-f2 { background:#bbb; }
+.rv-f1 { background:#aaa; }
+.rv-num { font-size:.78rem; font-weight:600; color:var(--muted); width:28px; text-align:right; flex-shrink:0; }
+
+/* Review cards grid */
+.rv-list { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+.rv-card {
+  background:#fff; border:1px solid var(--border); border-radius:12px;
+  padding:24px; display:flex; flex-direction:column; gap:12px;
+}
+.rv-card-head { display:flex; align-items:center; gap:12px; }
+.rv-avatar {
+  width:42px; height:42px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:.82rem; font-weight:700; color:#fff;
+}
+.rv-av1 { background:#7d5230; }
+.rv-av2 { background:#4a7c59; }
+.rv-av3 { background:#2d5a8e; }
+.rv-av4 { background:#8e4a2d; }
+.rv-av5 { background:#5a4a8e; }
+.rv-av6 { background:#2d7c6e; }
+.rv-meta { flex:1; min-width:0; }
+.rv-meta strong { display:block; font-size:.88rem; color:var(--text); }
+.rv-verified { font-size:.72rem; color:#2a9461; display:flex; align-items:center; gap:4px; margin-top:2px; }
+.rv-date { font-size:.72rem; color:var(--muted); white-space:nowrap; flex-shrink:0; }
+.rv-rating { display:flex; gap:2px; color:#f5a623; font-size:.88rem; }
+.rv-text { font-size:.85rem; color:var(--text); line-height:1.7; }
+.rv-likes { font-size:.75rem; color:var(--muted); display:flex; align-items:center; gap:5px; }
+.rv-likes i { color:var(--primary); }
+.rv-reply {
+  background:var(--bg-hero); border-radius:8px;
+  padding:12px 14px; font-size:.78rem; color:var(--text); line-height:1.65;
+}
+.rv-reply strong { display:block; color:var(--primary); font-size:.8rem; margin-bottom:4px; }
+
+/* =========================================
    PRODUCT DETAIL + SIZE TABLE
    ========================================= */
 #product-detail { padding:80px 0; background:var(--bg-ben); }
@@ -334,6 +397,7 @@ footer { background:#1a1510; color:rgba(255,255,255,.65); padding:56px 0 0; }
   .why-grid { grid-template-columns:repeat(2,1fr); gap:20px; }
   .footer-inner { grid-template-columns:1fr 1fr; }
   .detail-grid { gap:36px; }
+  .rv-list { grid-template-columns:1fr; }
 }
 
 /* =========================================
@@ -366,6 +430,8 @@ footer { background:#1a1510; color:rgba(255,255,255,.65); padding:56px 0 0; }
   .footer-inner { grid-template-columns:1fr; gap:28px; }
   .modal-box { padding:28px 20px; }
   .form-row { grid-template-columns:1fr; gap:16px; }
+  .rv-summary { flex-direction:column; align-items:stretch; padding:24px 20px; gap:24px; }
+  .rv-score { display:flex; flex-direction:column; align-items:center; }
 
   .ps-arrow { width:32px; height:32px; font-size:.75rem; }
   .ps-thumbs { gap:6px; }
