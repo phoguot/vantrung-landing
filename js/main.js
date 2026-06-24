@@ -10,7 +10,7 @@
    4. Copy URL web app → paste vào APPS_SCRIPT_URL bên dưới
    ========================================= */
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwPS2xtBxzX1UQ39bZfxUFdzOoC33Usf9T4s7JDugDesMk5ZEtPmC3LICL8KOANc2D6pg/exec';   // ← thay bằng URL sau khi deploy
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzO6U-298E2RkX3XtXlWMjei7dks-6N5gzx3grRWJlm-c-wOPGv3b2Xp755rUVnPSbm/exec';   // ← thay bằng URL sau khi deploy
 const TO_EMAIL        = 'trungthanhnguyen382000@gmail.com';  // dùng cho fallback mailto
 const UNIT_PRICE      = 699000;
 
